@@ -1,12 +1,12 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("", () => {
     // 🪲 Bug: Incorrect ID used for attaching the event listener
     document.getElementById("solveRoom").addEventListener("click", () => {
-        fetch('books.json') 
+        fetch('books.json')
             .then(response => response.json())
             .then(books => {
                 const mostRecentBook = findMostRecentBook(books);
                 // 🪲 Bug: Incorrect element ID
-                document.getElementById("resultRoom1").textContent = `The key to the next room is: ${mostRecentBook.title}`;
+                document.getElementById("room1Result").textContent = `The key to the next room is: ${mostRecentBook.title}`;
             });
     });
 
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 🪲 Bug: Asynchronous function ?
     document.getElementById("solveRoom3").addEventListener("click", () => {
-        fetch('directions.json') 
+        fetch('directions.json')
             .then(response => response.json())
             .then(directions => {
                 navigateLabyrinth(directions)
