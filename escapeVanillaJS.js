@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     document.getElementById("solveRoom2").addEventListener("click", () => {
-        const jsConcepts = new Set(['closure', 'scope', 'hoisting', 'IIFE', 'async/await', 'promises', 'callbacks']);
+        const jsConcepts = new Set(['closure', 'scope', 'hoisting', 'IIFE', 'async', 'promises', 'callbacks', 'await']);
         // 🪲 Bug: What's mssing from JS concepts?
         const reactConcepts = new Set(['components', 'jsx', 'hooks', 'async']);
         // 🪲 Bug: Incorrect function call
