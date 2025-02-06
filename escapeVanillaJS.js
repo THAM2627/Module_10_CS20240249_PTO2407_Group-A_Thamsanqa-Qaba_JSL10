@@ -33,8 +33,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function findMostRecentBook(books) {
     // 🪲 Bug: Logic error
-    return books.reduce((mostRecent, book) => new Date(book.published) > new Date(mostRecent.published) ? book : mostRecent);
-}
+    return books.reduce((mostRecent, book) => {
+        const mostRecent = new Date(mostRecent.published);
+        const bookDate = new Date(book.published); return bookDate > mostRecentDate ? book : mostRecent;
+    })
 
 function findIntersection(setA, setB) {
     // 🪲 Bug: Incorrect logic
