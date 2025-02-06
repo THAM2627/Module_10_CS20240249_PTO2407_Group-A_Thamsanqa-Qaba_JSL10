@@ -37,7 +37,7 @@ function findMostRecentBook(books) {
         const mostRecent = new Date(mostRecent.published);
         const bookDate = new Date(book.published); return bookDate > mostRecentDate ? book : mostRecent;
     })
-
+}
 function findIntersection(setA, setB) {
     // 🪲 Bug: Incorrect logic
     const intersection = new Set([...setA]);
