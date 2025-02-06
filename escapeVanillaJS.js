@@ -47,6 +47,7 @@ function findIntersection(setA, setB) {
         }
 
     }
+    return intersection;
 }
 
 async function navigateLabyrinth(directions) {
